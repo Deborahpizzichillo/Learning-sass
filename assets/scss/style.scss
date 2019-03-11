@@ -1,0 +1,148 @@
+$primary-color: #383838;
+$secondary-color: rgb(255, 153, 90);
+$margin: 10px;
+$mobile: 975px;
+
+@mixin mobile {
+    @media (max-width: #{$mobile}){
+        @content;
+    }   
+}
+
+
+body{
+    margin: 0;
+    background-color: #5f5f5e;
+    width: auto;
+}
+
+.primarylist{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align:center;
+}
+
+.primarylist li {
+    float: left;
+    @include mobile{
+        width: 100%;
+    }
+}
+
+
+.secondarylist {
+    @extend.primarylist;
+    display: flex;
+    justify-content: center;
+    margin-top: $margin*2;
+    margin-bottom: $margin*2;
+    
+    
+}
+
+.secondarylist li{
+   margin-right: $margin;
+   margin-left: $margin;
+}
+
+.secondarylist li img{
+    width:100%;
+   @include mobile{
+        width:100%;
+        
+    }
+}
+nav{
+    ul {
+    @extend .primarylist;
+    background-color: $primary-color;
+    }
+
+    li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+        &:hover{
+            background-color: $secondary-color;
+        }
+    }
+
+    input[type=text] {
+        padding: 6px;
+        border: none;
+        margin-top: 8px;
+        margin-right: 16px;
+        margin-left: 16px;
+        font-size: 17px;
+        @include mobile{
+            width: 80%;
+            margin: $margin auto;
+
+        }
+    }
+}
+
+main{
+    .bannercontainer{
+        background-color: $secondary-color;
+        padding: 20px 0;
+        
+    }
+    .bannercontainer img{
+        display: block;
+        margin-left: 10%;
+        margin-right: 10%;
+        max-width: 80%;
+        @include mobile{
+        width: 80%;
+        }
+    }  
+   
+}
+
+footer{
+    .footercontainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: $secondary-color;
+        @include mobile{
+            flex-direction: column;
+        }
+    }
+.footercontainer div{
+        @include mobile{
+            display: flex;
+            justify-content: center;
+        }
+    }
+    ul{
+        color: #ffffff;
+        list-style-type: none;
+        padding: 0;
+        margin: 0 $margin*2 0 $margin*2;
+        @include mobile{
+            margin-top: $margin*4;
+        }
+    }
+
+    li{
+        margin-top: $margin;
+        margin-bottom: $margin;
+        @include mobile{
+            text-align: center;
+        }   
+    }
+    li a {
+        color: #ffffff;
+        text-decoration: none;
+        &:hover{
+           color: #FF4040; 
+        }
+    }
+    
+}

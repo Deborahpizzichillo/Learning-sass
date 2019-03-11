@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  background-color: #5f5f5e;
+  width: auto;
+}
+
+.primarylist, nav ul, .secondarylist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+
+.primarylist li, nav ul li, .secondarylist li {
+  float: left;
+}
+@media (max-width: 975px) {
+  .primarylist li, nav ul li, .secondarylist li {
+    width: 100%;
+  }
+}
+
+.secondarylist {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.secondarylist li {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.secondarylist li img {
+  width: 100%;
+}
+@media (max-width: 975px) {
+  .secondarylist li img {
+    width: 100%;
+  }
+}
+
+nav ul {
+  background-color: #383838;
+}
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+nav li a:hover {
+  background-color: #ff995a;
+}
+nav input[type=text] {
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  margin-left: 16px;
+  font-size: 17px;
+}
+@media (max-width: 975px) {
+  nav input[type=text] {
+    width: 80%;
+    margin: 10px auto;
+  }
+}
+
+main .bannercontainer {
+  background-color: #ff995a;
+  padding: 20px 0;
+}
+main .bannercontainer img {
+  display: block;
+  margin-left: 10%;
+  margin-right: 10%;
+  max-width: 80%;
+}
+@media (max-width: 975px) {
+  main .bannercontainer img {
+    width: 80%;
+  }
+}
+
+footer .footercontainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #ff995a;
+}
+@media (max-width: 975px) {
+  footer .footercontainer {
+    flex-direction: column;
+  }
+}
+@media (max-width: 975px) {
+  footer .footercontainer div {
+    display: flex;
+    justify-content: center;
+  }
+}
+footer ul {
+  color: #ffffff;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 20px 0 20px;
+}
+@media (max-width: 975px) {
+  footer ul {
+    margin-top: 40px;
+  }
+}
+footer li {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media (max-width: 975px) {
+  footer li {
+    text-align: center;
+  }
+}
+footer li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+footer li a:hover {
+  color: #FF4040;
+}
+
+/*# sourceMappingURL=style.css.map */
